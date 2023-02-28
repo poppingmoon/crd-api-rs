@@ -3,7 +3,7 @@ use serde::{Deserialize, Deserializer, Serialize};
 
 /// 返却結果ルートノード
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#response>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#response>
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
 #[cfg_attr(test, serde(deny_unknown_fields))]
 pub struct ResultSet {
@@ -141,7 +141,7 @@ impl<'de> Deserialize<'de> for ResultItem {
 
 /// レファレンス事例
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_ref>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_ref>
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq, Default)]
 #[serde(rename_all = "kebab-case")]
 #[cfg_attr(test, serde(deny_unknown_fields))]
@@ -221,7 +221,7 @@ pub struct Reference {
 
 /// 調べ方マニュアル
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_man>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_man>
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 #[cfg_attr(test, serde(deny_unknown_fields))]
@@ -274,7 +274,7 @@ pub struct Manual {
 
 /// 特別コレクション
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_col>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_col>
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 #[cfg_attr(test, serde(deny_unknown_fields))]
@@ -337,7 +337,7 @@ pub struct Collection {
 
 /// 参加館プロファイル
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_pro>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_xmlfmt.html#api_xmlfmt_pro>
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
 #[serde(rename_all = "kebab-case")]
 #[cfg_attr(test, serde(deny_unknown_fields))]

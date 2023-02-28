@@ -9,7 +9,7 @@ use crate::{
 
 /// リクエストパラメータ
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#reqparam>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#reqparam>
 ///
 /// # Example
 ///

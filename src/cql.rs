@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 
 /// CQLフォーマットの検索クエリー
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#cql>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#cql>
 ///
 /// # Example
 /// ```
@@ -123,7 +123,7 @@ impl Display for Query {
 
 /// クエリー対象項目
 ///
-/// 参照: `<https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#cql>`
+/// 参照: <https://crd.ndl.go.jp/jp/help/general/api_spec_2.html#cql>
 ///
 /// - レファレンス事例
 ///     - `anywhere`: 全項目 (簡易検索)
