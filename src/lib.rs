@@ -25,6 +25,7 @@
 //! ```
 //!
 
+pub mod client;
 pub mod cql;
 pub mod error;
 pub mod request;

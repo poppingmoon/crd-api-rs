@@ -2,10 +2,7 @@ use chrono::NaiveDate;
 use derive_builder::Builder;
 use serde::{Deserialize, Serialize, Serializer};
 
-use crate::{
-    error::{ApiErrors, Error},
-    response::ResultSet,
-};
+use crate::{client::Client, error::Error, response::ResultSet};
 
 /// リクエストパラメータ
 ///
@@ -197,16 +194,7 @@ impl Request {
     /// - 返却されたXMLの解析に失敗したとき
     /// - APIがエラーを返したとき
     pub async fn search(&self) -> Result<ResultSet, Error> {
-        let url = self.url();
-        let resp = reqwest::get(&url).await?.text().await?;
-        let res = ResultSet::from_xml(&resp);
-        if res.is_err() {
-            let res = ApiErrors::from_xml(&resp);
-            if let Ok(e) = res {
-                return Err(e.into());
-            }
-        }
-        res.map_err(Error::De)
+        Client::new()?.search(self).await
     }
 }
 
