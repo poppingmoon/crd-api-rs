@@ -10,8 +10,13 @@ pub struct Client {
 
 impl Client {
     pub fn new() -> Result<Self, reqwest::Error> {
+        let headers = reqwest::header::HeaderMap::from_iter([(
+            reqwest::header::HOST,
+            "crd.ndl.go.jp".parse().unwrap(),
+        )]);
         Ok(Client {
             client: reqwest::Client::builder()
+                .default_headers(headers)
                 .user_agent("crd-api-rs")
                 .build()?,
         })
